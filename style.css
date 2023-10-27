@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --first-color: #2EF7B3;
+  }
+
+
+i{
+    transition-property: transform;
+    transition-duration: .2s;
+}
+
+
+
+
+.rotatedIcon {
+
+    transform: rotate(90deg);
+
+}
+
+
+body{
+    width: 100%;
+    height: 100vw;
+
+    display:flex;
+    flex-direction: row;
+}
+
+nav{
+    padding-top: 20px;
+
+    width: 325px;
+    height: 100%;
+    background-color: var(--first-color);
+
+    font-size: 18px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
+
+nav label{
+    display: inline-block;
+    width: 100%;
+
+}
+
+ul.University, ul.Logica{
+    opacity: 0;
+    transform: scaleY(0);
+
+    transition: transform 100ms, opacity 100ms;
+    transform-origin: top;
+
+}
+
+input[type="checkbox"]#Universidad:checked ~ ul.University{
+    opacity: 1;
+    transform: scaleY(1);
+
+}
+
+input[type="checkbox"]#Logica:checked ~ ul.Logica{
+    opacity: 1;
+    transform: scaleY(1)    
+}
+
+
+nav label {
+    margin-bottom: 4px;
+}
+
+
+li, ul{
+    display: block;
+    color: black;
+    list-style: none;
+    margin-left:10px;
+
+
+}
+
+
+li span{
+    font-weight: bold;
+    
+}
+
+li{
+    height: fit-content;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+main{
+    width: calc(100% - 325px);
+    height: 100%;
+    background-color: #fff;
+}
