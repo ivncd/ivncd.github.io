@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="assets/logica-proposicional/style.css">
+    <link rel="stylesheet" href="assets/logica-proposicional/table.css">
+    <link rel="stylesheet" href="/css/menu.css">
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--         -->
+    
+    <title>Ivan Collado - Logica Proposicional</title>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <input type="checkbox" id="Universidad" checked="checked" onchange="rotateMenuIcon(this)">
+                    <label for="Universidad">
+                        <span>
+                            <i class='bx bx-caret-right rotatedIcon' ></i>
+                            Universidad
+                        </span>
+                    </label>
+
+                    <ul class="University">
+                        <li>
+                            <input type="checkbox" id="Logica" checked="checked" onchange="rotateMenuIcon(this)">
+                            <label for="Logica" id="Logica">
+                                <span style="font-weight:500;">
+                                    <i class='bx bx-caret-right rotatedIcon' id="iconLogic"></i>
+                                    Lógica
+                                </span>
+                            </label>
+                            <ul class="Logica">
+                                <li class="selected">
+                                    <span style="font-size: 14px;">●</span> <a href="/universidad/logica/logica-proposicional.html">Lógica proposicional</a>
+                                </li>
+                            </ul>               
+                        </li>
+                    </ul>  
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="app">
+            <h1>Generador de Tablas de Verdad</h1>
+            <section class="main">
+                <textarea id="main" onblur="this.focus()" autofocus>p → (p ∧ q)</textarea> <!--{¬p ∧ ¬¬(((q ∧ r) ∧ ¬p) ∧ s), p ∧ x} ⊨ q-->
+            </section>
+            <section class="elements">
+                <div class="symbols">
+                    <div class="operators">
+                        <button class="negation" onclick="insertDataTextarea(this.textContent)">¬</button>
+                        <button onclick="insertDataTextarea(this.textContent)">∧</button>
+                        <button onclick="insertDataTextarea(this.textContent)">∨</button>
+                        <button onclick="insertDataTextarea(this.textContent)">→</button>
+                        <button onclick="insertDataTextarea(this.textContent)">↔</button>
+                        <button onclick="insertDataTextarea(this.textContent)">(</button>
+                        <button onclick="insertDataTextarea(this.textContent)">)</button>
+                    </div>
+                </div>
+                <div class="button">
+                    <button onclick="getText()">OPERAR</button>
+                </div>
+            </section>
+            <section id="result" class="results"></div>
+        </div>
+    </main>
+
+    <!-- Script modulos-->
+    <script src="/js/modules/PropositionalLogic.js"></script>
+    <script src="/js/modules/CreateTable.js"></script>
+    <!------------------->
+
+    <!-- Scripts pagina -->
+    <script src="assets/logica-proposicional/logic.js"></script>
+    <script src="/js/assets/menu.js"></script>
+    <!------------------>
+
+</body>
+</html>

@@ -165,14 +165,3 @@ class PropositionalLogic{
         }
     }
 }   
-
-
-
-let text = "(p ∨ a) ∨ ¬¬(((q ∧ r) ∧ ¬p) ∧ s)"
-
-
-let l = new PropositionalLogic(text)
-console.log(l.operations)
-console.log(l.variables)
-console.log(l.changedOperations)
-console.log(l.resultsDict[0])
