@@ -7,6 +7,7 @@
     <!-- Estilos -->
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/style.css">
 
     <!-- Fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +24,7 @@
 <body>
     <header>
         <nav>
+            <a class="centered-title" href="/index.html">HOME</a><br>
             <ul>
                 <li>
                     <input type="checkbox" id="Universidad" checked="checked" onchange="rotateMenuIcon(this)">
@@ -44,7 +46,9 @@
                             </label>
                             <ul class="Logica">
                                 <li>
-                                    <span style="font-size: 14px;">●</span> <a href="/universidad/logica/logica-proposicional.html">Lógica proposicional</a>
+                                    <div class="link">
+                                        <span style="font-size: 14px;">●</span> <a href="/universidad/logica/logica-proposicional.html">Lógica proposicional</a>
+                                    </div>
                                 </li>
                             </ul>               
                         </li>
@@ -52,10 +56,13 @@
                 </li>
             </ul>
         </nav>
+        <button class="slide" onclick="toggleNav()"><i id="menuIcon" style="font-size:28px" class='bx bxs-chevron-left'></i></button> <!-- Add icon and rotate it-->
     </header>
     <main>
+        <h1><a style="text-decoration: underline; color:lightslategrey;"  href="/universidad/logica/logica-proposicional.html">Último projecto</a></h1>
+        <p>Conseguir las tablas de verdad dada una operacion</p>
 
-
+        <h3>Mi pagina - Iván Collado</h3>
     </main>
 
 <script src="js/assets/menu.js"></script>

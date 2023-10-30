@@ -1,4 +1,5 @@
 * {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,43 +7,46 @@
 }
 
 
+body{
+
+    padding:5vmin;
+    height: 100vh;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
 div.app{
 
     width: 100%;
     height: 100%;
 
-    padding: 50px 5vw;
-    overflow-y: auto;
 }
-
-h1{
-    text-align: center;
-    margin-bottom: 40px;
-    font-family: 'IBM Plex Mono', monospace;
-}
-
 
 section.main{
 
     width: 100%;
     height: 30%;
-    max-height: min(20vh, 200px);
 
     display: flex;
+
+
+
 }
 
 
 textarea{
+
     width: 100%;
     height: 100%;
-    
+
     padding: 12px 20px;
     border: 2px solid #ccc;
     border-radius: 4px;
-
     background-color: #f8f8f8;
-    
-    font-size: 20px;
+    font-size: 16px;
     resize: none;
 
 }
@@ -56,11 +60,10 @@ div.containAll{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--menu-color);
+    background-color: aquamarine;
     align-items: center;
 
 }
-
 
 div.container{
     width: 100%;
@@ -69,6 +72,56 @@ div.container{
     overflow-y: auto;
 
     padding:20px;
+
+
+}
+
+div.button{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    align-items: stretch;
+    width: 100%;
+
+    padding:20px;
+    gap: 5px;
+}
+
+
+
+div.button button{
+    flex-grow: 1;
+    width: 50%;
+    padding:5px;
+
+}
+
+div.variables{
+    width: 100%;
+    height: fit-content, ;
+    /*min-width: 250px;*/
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    gap: 5px;
+
+    overflow: hidden;
+}
+
+
+div.variables button{
+    flex-grow: 1;
+
+    width: auto;
+    height: fit-content;
+    padding:5px;
+
+
+
 }
 
 
@@ -77,7 +130,7 @@ section.elements{
     width: 100%;
     height: auto;
 
-    background-color: var(--menu-color);
+    background-color: aquamarine;
 
     display: flex;
     flex-direction: row;
@@ -94,6 +147,8 @@ section.elements div.symbols{
 }
 
 section.elements div.symbols div.operators{
+
+
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 5px 5px;
@@ -101,15 +156,16 @@ section.elements div.symbols div.operators{
     grid-template-areas:
       ". . . negation "
       ". . . negation";
+
+
 }
 
 section.elements div.symbols div.operators button{
+
     font-size: 20px;
     padding:5px;
 
-    background-color: var(--main-color);
-    border: .5px solid black;
-    border-radius: 3px;
+
 
 }
 
@@ -122,38 +178,41 @@ section.elements div.symbols div.operators button:last-child{
 section.elements div.symbols div.variables{
     width: 50%;
     height: 100%;
+
+
 }
 
 section.elements div.button{
     width: 15%;
     height: auto;
-    min-width: 200px;
-    
+    min-width: 175px;
+
     padding:5px 20px;
 }
 
 section.elements div.button button{
-    width: 100%;
-    height: 100%;
 
-    background-color: var(--button-color);
-    border: 2px solid rgb(26, 26, 26);
+ width: 100%;
+ height: 100%;
 
-    border-radius: 3px;
-    transition: all .2s ease-in-out;
+ background-color: white;
+ border: 1px solid rgb(26, 26, 26);
 
-    font-size: 16px;
-    font-weight: 500;
-
+ border-radius: 4px;
+ transition: all .2s ease-in-out;
 }
 
 section.elements div.button button:hover{
+
     transform: scale(102%);
+
 }
 
 .operators {  display: grid;}
-
+  
 .negation { grid-area: negation;}
+
+
 
 section.results{
     display:flex;
@@ -166,14 +225,48 @@ section.results{
     overflow-x: auto;
 
     margin-bottom: 100px;
+
 }
 
-@media (max-width: 768px) {
+table{
     
-    section.elements div.button{
-        width: max(50%, 175px);
-        min-width: 120px;
-    }
+    width: 100%;
+    background-color: aquamarine;
+    border: 2px solid black;
 
-    
+}
+
+
+
+
+td, th{
+    padding: 10px 10px;
+    text-align: center;
+
+    border: 1px solid black;
+
+
+}
+
+
+
+th{
+    white-space: nowrap;
+    border: 2px solid black;
+    font-size: 22px;
+    font-weight: 600;
+
+}
+
+td{
+    font-size: 14px;
+
+}
+
+
+
+table, th, td{
+
+    border-collapse: collapse;
+
 }
